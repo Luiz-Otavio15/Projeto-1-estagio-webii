@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskClean - Login</title>
+
+    <link rel="stylesheet" href="Tela1Login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="login-box">
+
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <h1>TaskClean</h1>
+            </div>
+
+            <p class="subtitulo">
+                Organize suas tarefas de forma simples.
+            </p>
+            
+            
+
+
+            <form id="formLogin" action="Tela4Tarefas.html">
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+
+                    <div class="senha-container">
+
+                        <input 
+                            type="password" 
+                            id="senha" 
+                            placeholder="Digite sua senha"
+                            required
+                        >
+
+                        <span class="olho" id="iconeSenha">
+                            👁
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="opcoes">
+
+                    <label class="lembrar">
+                        <input type="checkbox">
+                        Lembrar de mim
+                    </label>
+
+                    <a href="Tela3Senha.html">Esqueceu sua senha?</a>
+
+                </div>
+
+                <button type="submit">
+                    Entrar
+                </button>
+
+            </form>
+
+            <p class="cadastro">
+                Ainda não possui uma conta?
+                <a href="Tela2Cadastro.html">Criar conta</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 TaskClean. Todos os direitos reservados para José Matheus.</p>
+    </footer>
+
+    <script src="Tela1Login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
+</body>
+
+</html>
