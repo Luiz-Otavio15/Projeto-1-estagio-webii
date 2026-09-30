@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> TaskClean - Criar Conta</title>
+
+    <link rel="stylesheet" href="Tela2Cadastro.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="login-box cadastro-box">
+
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <h1>TaskClean</h1>
+            </div>
+
+            <p class="subtitulo">
+                Crie sua conta para começar a organizar suas tarefas.
+            </p>
+
+            <form id="formCadastro">
+
+                <div class="campo">
+                    <label for="nome">Nome</label>
+
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        placeholder="Digite seu nome"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Digite seu e-mail"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+
+                    <div class="senha-container">
+
+                        <input 
+                            type="password" 
+                            id="senha" 
+                            placeholder="Crie uma senha"
+                            required
+                        >
+
+                        <span class="olho" id="iconeSenha">
+                            👁
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmarSenha">Confirmar senha</label>
+
+                    <div class="senha-container">
+
+                        <input 
+                            type="password" 
+                            id="confirmarSenha" 
+                            placeholder="Digite a senha novamente"
+                            required
+                        >
+
+                        <span class="olho" id="iconeConfirmarSenha">
+                            👁
+                        </span>
+
+                    </div>
+                </div>
+
+                <button type="submit">
+                    Criar conta
+                </button>
+
+            </form>
+
+            <p class="cadastro">
+                Já possui uma conta?
+                <a href="Tela1Login.html">Entrar</a>
+            </p>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 TaskClean. Todos os direitos reservados para José Matheus.</p>
+    </footer>
+
+    <script src="Tela2Cadastro.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Tela3Senha.css">
+</head>
+<body>
+    <div class="container">
+
+        <div class="login-box cadastro-box">
+
+            <div class="logo">
+                <div class="logo-icon">✓</div>
+                <h1>TaskClean</h1>
+            </div>
+
+            <p class="subtitulo">
+               Recupera sua senha para começar a organizar suas tarefas.
+            </p>
+            
+            <form id="formCadastro">
+
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+
+                    <div class="senha-container">
+
+                        <input 
+                            type="password" 
+                            id="senha" 
+                            placeholder="Crie uma senha"
+                            required
+                        >
+
+                        <span class="olho" id="iconeSenha">
+                            👁
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmarSenha">Confirmar senha</label>
+
+                    <div class="senha-container">
+
+                        <input 
+                            type="password" 
+                            id="confirmarSenha" 
+                            placeholder="Digite a senha novamente"
+                            required
+                        >
+
+                        <span class="olho" id="iconeConfirmarSenha">
+                            👁
+                        </span>
+
+                    </div>
+                </div>
+
+                <button type="submit">
+                    Nova Senha
+                </button>
+
+            </form>
+
+            <p class="cadastro">
+                Já possui uma conta?
+                <a href="Tela1Login.html">Entrar</a>
+            </p>
+
+        </div>
+
+    </div>
+    <footer>
+        <p>© 2026 TaskClean. Todos os direitos reservados para José Matheus.</p>
+    </footer>
+
+    <script src="Tela3Senha.js"></script>
+</body>
+</html>
