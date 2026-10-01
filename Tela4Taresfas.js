@@ -138,13 +138,21 @@ function concluirTarefa(id) {
     tarefas = tarefas.map(function(tarefa) {
 
         if (tarefa.id === id) {
-
             tarefa.concluida = !tarefa.concluida;
-
+            if (tarefa.concluida === true){
+                appendAlert(`Você marcou a tarefa ${tarefa.nome} como concluido!`, `success`)
+            }
+            if (tarefa.concluida === false) {
+                appendAlert(`Você desmarcou a tarefa: ${tarefa.nome}`, `danger`)
+            }
+            
         }
-
+        
+        
         return tarefa;
 
+
+
     });
 
 
@@ -154,21 +162,48 @@ function concluirTarefa(id) {
 
 }
 
+let idParaExcluir = null;
+let modalExcluir = null;
 
+// Abre a tela de confirmação
 function excluirTarefa(id) {
-
-    tarefas = tarefas.filter(function(tarefa) {
-
-        return tarefa.id !== id;
-
+    
+    const tarefa = tarefas.find(function(t) {
+        return t.id === id;
     });
 
+    
+
+    idParaExcluir = id;
+    document.getElementById("textoExcluir").textContent =
+        `Tem certeza que deseja excluir ${tarefa.nome} ? Essa ação não pode ser desfeita.`;
+
+    if (!modalExcluir) {
+        modalExcluir = new bootstrap.Modal(document.getElementById("modalExcluir"));
+    }
+
+    modalExcluir.show();
+}
+
+// Exclui de verdade, só depois de confirmar
+function confirmarExclusao() {
+    tarefas = tarefas.filter(function(tarefa) {
+        appendAlert(`Você excluiu a tarefa: ${tarefa.nome}`, `success`)
+        return tarefa.id !== idParaExcluir;
+    });
 
     salvarTarefas();
-
     mostrarTarefas();
 
+    modalExcluir.hide();
+    idParaExcluir = null;
 }
+
+document.getElementById("confirmarExcluir").addEventListener("click", confirmarExclusao);
+
+
+
+
 
 
 adicionarBtn.addEventListener("click", adicionarTarefa);
@@ -218,8 +253,9 @@ mostrarTarefas();
 
 
 
+
 const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
-const appendAlert = (message, type) => {
+const appendAlert = (message, type, tempo) => {
   
     
   
@@ -232,5 +268,7 @@ const appendAlert = (message, type) => {
     ].join('')
 
   alertPlaceholder.append(wrapper)
+  setTimeout(function() {
+        bootstrap.Alert.getOrCreateInstance(alerta).close();
+    }, tempo);
 }
-

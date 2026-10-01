@@ -141,7 +141,7 @@ body {
 
 
 
-button {
+.buttonForm {
     width: 100%;
     padding: 13px;
     border: none;
@@ -152,7 +152,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buttonForm:hover {
     background-color: #2d604c;
 }
 

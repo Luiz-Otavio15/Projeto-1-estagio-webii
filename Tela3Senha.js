@@ -1,6 +1,7 @@
-const senha = document.getElementById("senha");
-const confirmarSenha = document.getElementById("confirmarSenha");
-
+const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+const formSenha = document.getElementById("formSenha");
+const senhaInput = document.getElementById("senha");
+const confirmarInput = document.getElementById("confirmarSenha");
 const iconeSenha = document.getElementById("iconeSenha");
 const iconeConfirmarSenha = document.getElementById("iconeConfirmarSenha");
 

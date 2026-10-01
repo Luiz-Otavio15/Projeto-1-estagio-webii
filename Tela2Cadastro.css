@@ -174,7 +174,7 @@ body {
 
 
 
-button {
+.buttonCadastro {
     width: 100%;
     padding: 13px;
     border: none;
@@ -185,7 +185,7 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+.buttonCadastro:hover {
     background-color: #2d604c;
 }
 
